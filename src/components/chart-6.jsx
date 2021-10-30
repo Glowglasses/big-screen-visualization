@@ -2,13 +2,13 @@ import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
 import {createEchartsOptions} from '../shared/create-echarts-options';
 import {px} from '../shared/px';
-import china from '../geo/china.json';
+import china from '../geo/china.json'
 
 export const Chart6 = () => {
   const divRef = useRef(null);
   const colors = {'青海省': '#BB31F7', '甘肃省': '#15B8FD', '四川省': '#06E1EE'};
   useEffect(() => {
-    var myChart = echarts.init(divRef.current);
+    const myChart = echarts.init(divRef.current);
     // @ts-ignore
     echarts.registerMap('CN', china);
     myChart.setOption(createEchartsOptions({
@@ -75,11 +75,11 @@ export const Chart6 = () => {
       <div className="wrapper">
         <div ref={divRef} className="chart"/>
         <div className="legend bordered">
-          <span className="icon" style={{background: colors['甘肃省']}}/>甘岭籍
-          <span className="icon" style={{background: colors['四川省']}}/>边城籍
-          <span className="icon" style={{background: colors['青海省']}}/>寒国籍
+          <span className="icon" style={{background: colors['甘肃省']}}/>X籍
+          <span className="icon" style={{background: colors['四川省']}}/>Y籍
+          <span className="icon" style={{background: colors['青海省']}}/>Z籍
         </div>
-        <div className="notes">此地图仅显示了中国的部分区域</div>
+        <div className="notes">此地图仅为演示效果,籍贯分布地仅为演示并非真实数据</div>
       </div>
     </div>
   );
