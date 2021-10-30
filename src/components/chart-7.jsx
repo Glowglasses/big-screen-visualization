@@ -6,7 +6,7 @@ import {px} from '../shared/px';
 export const Chart7 = () => {
   const divRef = useRef(null);
   useEffect(() => {
-    var myChart = echarts.init(divRef.current);
+    const myChart = echarts.init(divRef.current);
     myChart.setOption(createEchartsOptions({
       color: ['#8D70F8', '#33A4FA'],
       xAxis: {show: false},

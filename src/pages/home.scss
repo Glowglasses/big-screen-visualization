@@ -1,4 +1,4 @@
-@import "../shared/__helper";
+@import "../shared/_helper";
 %legend {
   height: px(40);
   display: flex;
@@ -214,6 +214,8 @@
 
           > .main {
             flex: 1;
+            display: flex;
+            justify-content: center;
           }
 
           > .text {
@@ -292,15 +294,14 @@
       }
     }
 
-    .战果, .作案手段 {
-      padding: 0 px(24);
+    .战果{
+      //padding: 0 px(24);
 
       > table {
         width: 100%;
         table-layout: fixed;
-        margin-top: px(25);
+        margin-top: px(28);
         border-collapse: collapse;
-
         th, td {
           border: 1px solid #1a3671;
         }
@@ -324,6 +325,37 @@
     }
 
     .作案手段 {
+      padding: 0 px(24);
+
+      > table {
+        width: 100%;
+        table-layout: fixed;
+        //margin-top: px(28);
+        border-collapse: collapse;
+        th, td {
+          border: 1px solid #1a3671;
+        }
+
+        thead {
+          th {
+            height: px(70);
+            box-shadow: inset 0 0 px(60) 0 #1f3d85;
+          }
+        }
+
+        tbody {
+          td {
+            height: px(50);
+            width: px(84);
+            background: #1c2456;
+          }
+
+        }
+      }
+    }
+
+    .作案手段 {
+      overflow: hidden;
       > table {
         tbody {
           td {
